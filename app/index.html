@@ -22,27 +22,30 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+    <script type="text/x-handlebars" data-template-name="index">
+
         <div class="container">
             <h1>AltSchool Tiles</h1>
 
-            <div class="btmButtons">
-                <button class="resetBtn">Reset my Tiles</button>
-                <button>Save my Tiles!</button>
+            <div class="topButtons">
+                <button {{action "resetBoard"}} class="resetBtn">Reset my Tiles</button>
+                <button {{action "saveBoard"}} class="saveBtn">Save my Tiles!</button>
             </div>
 
             <div class="tile white">
-                yo.
             </div>
             <div class="tile white">
-                yo.
             </div>
             <div class="tile white">
-                yo.
+            </div>
+            <div class="tile white">
             </div>
 
             
             
         </div>
+
+    </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -57,11 +60,22 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/firebase/firebase.js"></script>
+        <script src="bower_components/handlebars/handlebars.js"></script>
+        <script src="bower_components/ember/ember.js"></script>
+        <script src="bower_components/ember-data/ember-data.js"></script>
+        <script src="bower_components/emberfire/dist/emberfire.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/application.js"></script>
+        <script src="scripts/router.js"></script>
+        <script src="scripts/models/board.js"></script>
+        <script src="scripts/controllers/index_controller.js"></script>
+        <script src="scripts/views/index_view.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
