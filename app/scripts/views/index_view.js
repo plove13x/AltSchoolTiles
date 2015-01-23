@@ -19,10 +19,10 @@
 
 				if ( $this.hasClass('randomColor') ) {
 					$this.removeClass('randomColor');
-					$this.css('background', 'white');
+					$this.css('background-color', 'white');
 				} else {
 					$this.addClass('randomColor');
-					$this.css('background', newColor);	
+					$this.css('background-color', newColor);	
 				}
 
 			});
